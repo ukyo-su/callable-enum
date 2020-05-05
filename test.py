@@ -15,6 +15,20 @@ def test_call():
     assert Test.B() == "B"
 
 
+def test_call_arg():
+    class Test(CallableEnum):
+        @register(1)
+        def ADD1(self, x):
+            return self.value + x
+
+        @register(2)
+        def SUB2(self, x):
+            return x - self.value
+
+    assert Test.ADD1(1) == 2
+    assert Test.SUB2(2) == 0
+
+
 def test_value():
     class Test(CallableEnum):
         @register(3)
