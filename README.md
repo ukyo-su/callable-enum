@@ -7,7 +7,7 @@ Callable Enum for Python
 pip install git+git://github.com/ukyo-su/callable-enum@master
 ```
 
-## CallableEnum & register(value)
+## CallableEnum & member & member_with_value(value)
 
 ```python
 from callable_enum import CallableEnum, member, member_with_value
