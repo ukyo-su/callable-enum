@@ -3,6 +3,8 @@ Callable Enum for Python
 
 ## installation
 
+tested with Python 3.7-8.
+
 ```bash
 pip install git+git://github.com/ukyo-su/callable-enum@master
 ```
