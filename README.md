@@ -10,14 +10,14 @@ pip install git+git://github.com/ukyo-su/callable-enum@master
 ## CallableEnum & register(value)
 
 ```python
-from callable_enum import CallableEnum
+from callable_enum import CallableEnum, member, member_with_value
 
 class Operator(CallableEnum):
-    @register
+    @member
     def ADD(self, x, y):
         return x + y
     
-    @register
+    @member
     def SUB(self, x, y):
         return x - y
 
@@ -30,11 +30,11 @@ Operator.SUB(2, 1)
 # you can set values of CallableEnum's
 
 class AddSubValue(CallableEnum):
-    @register(value=1)
+    @member_with_value(1)
     def ADD1(self, x):
         return x + self.value
 
-    @register(value=2)
+    @member_with_value(2)
     def SUB2(self, x):
         return x - self.value
 

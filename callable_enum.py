@@ -10,10 +10,11 @@ class _Wrapper:
     value: any
 
 
-def register(value=None):
-    if value is None:
-        value = auto()
+def member(body):
+    return member_with_value(auto())(body)
 
+
+def member_with_value(value):
     def decorator(body):
         return _Wrapper(body, value)
 
